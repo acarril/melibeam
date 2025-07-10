@@ -1,21 +1,28 @@
 ---
 marp: true
-theme: neobeam
+theme: melibeam
 paginate: true
 math: katex
-footer: '**mikael-ros**
+footer: '**Alvaro Carril**
          **A modern take on the LaTeX beamer theme**
-         **Version 0.9, 2025**'
+         **Version 0.1, July 2025**'
+---
+<!-- _class: title2 -->
+
+# Your Title Here is a very long title that tests everything
+## Subtitle or additional info
+> Any other content like quotes
+
 ---
 <!-- _class: title -->
 # A modern take on the LaTeX beamer theme
 
-## mikael-ros
+## Alvaro Carril
 
 > ### Faculty of GitHub
 > University of Marp
 
-## Version 0.9, 2025
+## Version 0.1, July 2025
 
 ![logo GitHub Logo](../assets/github-mark.svg)
 
@@ -88,4 +95,33 @@ Text can be <mark>marked</mark>, <abbr title="abbreviated">abbr</abbr> and you c
 
 You can embed audio like:
 <audio controls src="http://codeskulptor-demos.commondatastorage.googleapis.com/pang/pop.mp3" type="audio/mp3">
-</audio> 
+</audio>
+
+---
+<!-- header: 'Two-column layout showcase' -->
+
+<div class="two-columns">
+<div>
+
+## Left Column
+
+**Key Features:**
+- Responsive design and some other words that make this sentence long
+- Easy to implement
+- Perfect spacing
+- Markdown support
+
+</div>
+<div>
+
+## Right Column
+
+**Key Features:**
+- Responsive design and some other words that make this sentence long
+- Easy to implement
+- Perfect spacing
+- Markdown support
+
+
+</div>
+</div> 
