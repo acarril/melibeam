@@ -9,7 +9,7 @@ footer: '**Alvaro Carril**
 ---
 <!-- _class: title2 -->
 
-# Your Title Here is a very long title that tests everything
+# Your Title For A Groundbreaking Project Goes Here
 ## Subtitle or additional info
 > Any other content like quotes
 
@@ -27,7 +27,7 @@ footer: '**Alvaro Carril**
 ![logo GitHub Logo](../assets/github-mark.svg)
 
 ---
-<!-- header: 'Table of contents' -->
+<!-- header: 'Table of contents and some other text to make this header super long and annoying so that I test it with 2 lines.' -->
 1. Normal text
 2. Code blocks
 3. Mathematics

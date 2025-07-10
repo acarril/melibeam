@@ -58,8 +58,8 @@
     --highlight-color-three:    hsl(from var(--primary) calc(h - var(--color-shift)) calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .15) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .1));
 
     --definition-height: 1.5em;
-    --header-height: 2.5rem;
-    --footer-height: calc(.6*var(--header-height));
+    --header-height: 3.5rem;
+    --footer-height: 1.5rem;
 
     --top-margin: calc(1.5*var(--header-height));
     --left-right-margin: calc((var(--header-height) + var(--footer-height))/2);
@@ -153,15 +153,30 @@ section header {
     /* Position at top */
     top: 0;
     
-    /* Compensate for radius */
-    padding: max(0.5rem, var(--_radius));
-    --height: calc(var(--header-height) + .5*var(--_radius));
-    --radius: var(--border-radius-default);
+    /* Simplified padding with extra left padding for accent */
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    --height: var(--header-height);
+    --radius: 0;
 
-    font-weight: 600;
-    font-size: 1.25rem;
+    font-weight: 400;
+    font-size: 1rem;
 
-    border-radius: 0 0 var(--_radius) var(--_radius);
+    border-radius: 0;
+    
+    /* Gray background with white text */
+    background-color: var(--text-color);
+    color: #ffffff;
+}
+
+/* Yellow accent bar on the left */
+section header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 25px;
+    background-color: #ffda06;
 }
 
 /* Footers */
