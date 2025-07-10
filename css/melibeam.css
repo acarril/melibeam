@@ -633,7 +633,3 @@ q {
 audio {
     margin: var(--text-padding) 0;
 }
-
-.katex span {
-    /*font: normal 1em var(--math-font); currently unsupported*/
-}
