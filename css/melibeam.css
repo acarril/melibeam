@@ -327,7 +327,7 @@ section.title2 {
     
     /* Position everything to the left */
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
     
@@ -336,19 +336,23 @@ section.title2 {
     
     /* Add padding */
     padding: calc(8*var(--text-padding));
+    
+    /* Add fixed top margin to ensure content always starts at same position */
+    padding-top: calc(80px + 1.5em + 8*var(--text-padding));
 }
 
 /* Add Meli logo at the top */
 section.title2::before {
     content: '';
-    display: block;
-    width: 400px;
-    height: 200px;
+    position: absolute;
+    top: calc(4*var(--text-padding));
+    left: calc(8*var(--text-padding));
+    width: 300px;
+    height: 120px;
     background-image: url('../assets/meli-logo-es.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left center;
-    margin-bottom: 1em;
 }
 
 section.title2 > * {
