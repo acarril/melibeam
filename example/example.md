@@ -14,19 +14,6 @@ footer: '**Alvaro Carril**
 > Any other content like quotes
 
 ---
-<!-- _class: title -->
-# A modern take on the LaTeX beamer theme
-
-## Alvaro Carril
-
-> ### Faculty of GitHub
-> University of Marp
-
-## Version 0.1, July 2025
-
-![logo GitHub Logo](../assets/github-mark.svg)
-
----
 <!-- header: 'Table of contents and some other text to make this header super long and annoying so that I test it with 2 lines.' -->
 1. Normal text
 2. Code blocks
@@ -36,14 +23,13 @@ footer: '**Alvaro Carril**
 6. HTML stuff
 ---
 <!-- header: 'Normal text' -->
-**This** is what a regular slide can look like in Neobeam.
+**This** is what a _regular slide_ can look like in Melibeam.
 - A cool fact
 - Interesting tidbit
 
 My favorite letters are:
 1. A
-2. B
-3. C
+2. $\beta$
 
 A quote from my favorite author
 > "Hello" - Author Cool 2024
@@ -53,7 +39,7 @@ A quote from my favorite author
 We can define ``variables`` inline, and code in blocks (with syntax highlighting!!!):
 ```java
     if (marp) {
-        apply.neobeam();
+        apply.melibeam();
     }
 ```
 ---
@@ -99,6 +85,8 @@ You can embed audio like:
 
 ---
 <!-- header: 'Two-column layout showcase' -->
+
+# Title
 
 <div class="two-columns">
 <div>
