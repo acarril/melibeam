@@ -655,6 +655,12 @@ mark {
     border-radius: .25em;
 }
 
+/* Lowlight - reduced opacity text */
+span.lowlight {
+    opacity: 0.5;
+    color: var(--text-color-lightest);
+}
+
 abbr {
     color: var(--text-color-lightest);
 }
