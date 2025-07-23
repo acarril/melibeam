@@ -497,6 +497,13 @@ pre, code, samp {
     line-height: unset;
 }
 
+/* Override width restrictions for code blocks to allow full width */
+pre {
+    min-width: unset;
+    width: 90%;
+    max-width: 90%;
+}
+
 /*===================*/
 
 /* Tables */
