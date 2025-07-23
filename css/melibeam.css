@@ -369,7 +369,7 @@ section.title2::before {
     left: calc(8*var(--text-padding));
     width: 300px;
     height: 120px;
-    background-image: url('../assets/meli-logo-es.svg');
+    background-image: url('https://raw.githubusercontent.com/acarril/melibeam/refs/heads/main/assets/meli-logo-es.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left center;
