@@ -624,6 +624,13 @@ img[alt*="right"]{
     height: 0;
 }
 
+/* Make images within two-columns layout use full column width */
+.two-columns img,
+.two-columns-60-40 img {
+    max-width: 90%;
+    width: 90%;
+}
+
 /*-----------------------------------------------------------*/
 /*******************/
 /* Inline elements */
