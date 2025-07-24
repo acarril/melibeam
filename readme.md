@@ -1,5 +1,5 @@
 <p align="center">
-    <img style="background-color: transparent" src="assets/neobeam.svg">
+    <img style="background-color: transparent" src="assets/melibeam.png">
 </p>
 
 [![Mentioned in Awesome Marp](https://awesome.re/mentioned-badge-flat.svg)](https://github.com/marp-team/awesome-marp)
