@@ -51,7 +51,7 @@
     --text-color-negative:          hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .1) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .3));
     --text-color-negative-lightest: hsl(from var(--text-color-negative) h s calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .1));
     --text-color-negative-lighter:  hsl(from var(--text-color-negative) h s calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .2));
-    --text-color-negative-darker:   hsl(from var(--text-color-negative) h s calc(l - var(--brightness-decreaser) * var(--build-multiplier) * .1));
+    --text-color-negative-darker:   hsl(from var(--text-color-negative) h s calc(l - var(--decreaser) * var(--build-multiplier) * .1));
 
     --highlight-color-one:      var(--primary);
     --highlight-color-two:      hsl(from var(--primary) calc(h + var(--color-shift)) calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .15) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .1));
@@ -192,6 +192,14 @@ footer {
     --height: var(--footer-height);
     
     font-size: 0.65rem;
+    
+    /* Make the footer bar transparent, as it's just a container */
+    background-color: transparent;
+
+    /* Style for the text content (footnote) */
+    color: var(--text-color);
+    padding: 0 var(--text-padding);
+    justify-content: flex-start; /* Align footnote to the left */
 }
 
 /* The pagination index */
@@ -207,9 +215,12 @@ section::after {
 
     height: var(--footer-height);
     line-height: var(--footer-height);
-    width: calc(2*var(--footer-height)); /* Give more space as necessary */
-    color: var(--text-color-negative);
-    font-size: calc(0.65 * var(--font-size)); /* For some reason simply writing 0.65rem won't do here */
+    width: fit-content; /* Adjust width to content */
+    padding: 0 0.5rem; /* Add some padding */
+    
+    /* Use a lighter, more muted text color for the page numbers */
+    color: var(--text-color-lightest);
+    font-size: calc(0.65 * var(--font-size));
 
     text-overflow: ellipsis;
     overflow: hidden;
@@ -217,58 +228,7 @@ section::after {
     z-index: 2;
 }
 
-/* * = strong, currently */
-footer > * {
-    position: relative;
-    --_bg-color: var(--bg-color, var(--darker-primary));
-    --radius: calc(var(--height) / 2);
-
-    height: 100%;
-    line-height: var(--height);
-    flex: 1; /* Share space evenly */
-    
-    padding: var(--_radius);
-    text-align: center;
-    font-weight: initial; /* Reset weight */
-    
-    background-color: var(--_bg-color);
-    
-    border-radius: 0 var(--radius) var(--radius) 0;
-    padding: 0 var(--text-padding);
-    
-    z-index: 2;
-}
-
-/* All fields but the first */
-footer > *:nth-child(n+2) {
-    --radius-space: calc(.5 * var(--radius));
-    /* Compensate for radius */
-    margin-left: calc(-2 * var(--radius-space));
-    padding-left: calc(var(--text-padding) + var(--radius-space));
-    
-}
-
-/* First field */
-footer > *:nth-child(1) {
-    --bg-color: var(--darkest-primary);
-    text-align: left;
-    z-index: 3;
-}
-
-/* Last field */
-footer > *:last-child {
-    --bg-color: var(--primary);
-    text-align: right;
-
-    border-radius: 0;
-    z-index: 1;
-
-    /* Leave space for pagination number */
-    --pagination-space: calc(2*var(--footer-height) + 2 * var(--text-padding));
-    margin-left: calc(-2 * var(--radius-space) - var(--pagination-space));
-    padding-left: calc(var(--text-padding) + var(--radius-space));
-    padding-right: var(--pagination-space);
-}
+/* Removed the rules for footer > * as they are no longer needed */
 
 /*-----------------------------------------------------------*/
 /***************/
